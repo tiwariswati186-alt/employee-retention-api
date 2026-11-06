@@ -1,12 +1,8 @@
 # 🏢 Employee Retention Prediction Pipeline
 
-[![FastAPI](https://shields.io)](https://tiangolo.com)
-[![LightGBM](https://shields.io)](https://readthedocs.io)
-[![Render](https://shields.io)](https://render.com)
-
 An end-to-end machine learning system that predicts employee attrition risks and job-change probabilities. This project transitions an experimental data science workflow from a Jupyter Notebook into a production-ready asynchronous web server.
 
-🚀 **Live API Testing Dashboard (Swagger UI):** [https://employee-retention-api.onrender.com/docs](https://employee-retention-api.onrender.com/docs)
+🚀 **Live API Testing Dashboard (Swagger UI):** [https://employee-retention-api.onrender.com/docs](https://employee-retention-api.onrender.com/docs)  
 💻 **Interactive Development Notebook:** `Employee Retention Prediction.ipynb`
 
 ---
@@ -30,6 +26,7 @@ Predicting employee turnover is a critical challenge for HR departments to minim
 4. **Model Performance Metrics:** 
    * **Overall Accuracy:** `79.4%`
    * **ROC-AUC Score:** `0.812`
+   * **Recall (Job-Change Class):** `69.0%`
 
 ---
 
@@ -89,11 +86,11 @@ Once initialized, navigate your local browser to `http://127.0.0` to access the 
 ### Dynamic Backend API Output
 ```json
 {
-  "prediction": 0,
-  "outcome": "Stay",
+  "prediction": 1,
+  "outcome": "Job Change Risk",
   "probability_score": {
-    "stay_probability": 0.8285,
-    "job_change_probability": 0.1715
+    "stay_probability": 0.1715,
+    "job_change_probability": 0.8285
   }
 }
 ```
